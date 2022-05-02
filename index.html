@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <meta name="next-head-count" content="5" />
+    <link rel="preload" href="_next/static/css/b730d6d5eb1d280c.css" as="style" />
+    <link rel="stylesheet" href="_next/static/css/b730d6d5eb1d280c.css" data-n-g=""/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@metamask/legacy-web3@latest/dist/metamask.web3.min.js"></script>
+    <style data-href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&amp;family=Orbitron:wght@400;700&amp;display=swap">
+      @font-face {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/dmsans/v6/rP2Hp2ywxg089UriOZc.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/dmsans/v6/rP2Cp2ywxg089UriASitOBw.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Orbitron";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/orbitron/v19/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6xpQ.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Orbitron";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/orbitron/v19/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1ny_CmxpQ.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/dmsans/v6/rP2Hp2ywxg089UriCZ2IHTWEBlwu8Q.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/dmsans/v6/rP2Hp2ywxg089UriCZOIHTWEBlw.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/dmsans/v6/rP2Cp2ywxg089UriASitCBamC3YU-CnE6Q.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/dmsans/v6/rP2Cp2ywxg089UriASitCBimC3YU-Ck.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Orbitron";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/orbitron/v19/yMJRMIlzdpvBhQQL_Qq7dy1biN15.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Orbitron";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/orbitron/v19/yMJRMIlzdpvBhQQL_Qq7dy1biN15.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="__next" data-reactroot="">
+      <div class="bg-black">
+        <div class="fixed text-white z-20 top-5 right-5 flex space-x-2">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://discord.com/invite/theshifters"
+            ><span
+              style="
+                box-sizing: border-box;
+                display: inline-block;
+                overflow: hidden;
+                width: initial;
+                height: initial;
+                background: none;
+                opacity: 1;
+                border: 0;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                max-width: 100%;
+              "
+              ><span
+                style="
+                  box-sizing: border-box;
+                  display: block;
+                  width: initial;
+                  height: initial;
+                  background: none;
+                  opacity: 1;
+                  border: 0;
+                  margin: 0;
+                  padding: 0;
+                  max-width: 100%;
+                "
+                ><img
+                  style="
+                    display: block;
+                    max-width: 100%;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                  "
+                  alt=""
+                  aria-hidden="true"
+                  src="images/data:image-svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+" /></span
+              ><img
+                src="images/gif;base64,R0lGODlhAQABAIAAAAAAAP-yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                decoding="async"
+                data-nimg="intrinsic"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  padding: 0;
+                  border: none;
+                  margin: auto;
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  min-width: 100%;
+                  max-width: 100%;
+                  min-height: 100%;
+                  max-height: 100%;
+                " /><noscript
+                ><img
+                  srcset="
+                    _next/image?url=%2Ficons%2Fdiscord-brands.svg&amp;w=32&amp;q=75 1x,
+                    _next/image?url=%2Ficons%2Fdiscord-brands.svg&amp;w=64&amp;q=75 2x
+                  "
+                  src="images/_next-image"
+                  decoding="async"
+                  data-nimg="intrinsic"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  "
+                  loading="lazy" /></noscript></span></a
+          ><a
+            rel="noreferrer"
+            target="_blank"
+            href="https://twitter.com/theshifters_"
+            ><span
+              style="
+                box-sizing: border-box;
+                display: inline-block;
+                overflow: hidden;
+                width: initial;
+                height: initial;
+                background: none;
+                opacity: 1;
+                border: 0;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                max-width: 100%;
+              "
+              ><span
+                style="
+                  box-sizing: border-box;
+                  display: block;
+                  width: initial;
+                  height: initial;
+                  background: none;
+                  opacity: 1;
+                  border: 0;
+                  margin: 0;
+                  padding: 0;
+                  max-width: 100%;
+                "
+                ><img
+                  style="
+                    display: block;
+                    max-width: 100%;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                  "
+                  alt=""
+                  aria-hidden="true"
+                  src="images/data:image-svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+" /></span
+              ><img
+                src="images/gif;base64,R0lGODlhAQABAIAAAAAAAP-yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                decoding="async"
+                data-nimg="intrinsic"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  padding: 0;
+                  border: none;
+                  margin: auto;
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  min-width: 100%;
+                  max-width: 100%;
+                  min-height: 100%;
+                  max-height: 100%;
+                " /><noscript
+                ><img
+                  srcset="
+                    _next/image?url=%2Ficons%2Ftwitter-brands.svg&amp;w=32&amp;q=75 1x,
+                    _next/image?url=%2Ficons%2Ftwitter-brands.svg&amp;w=64&amp;q=75 2x
+                  "
+                  src="images/_next-image"
+                  decoding="async"
+                  data-nimg="intrinsic"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  "
+                  loading="lazy" /></noscript></span></a
+          ><a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.instagram.com/the.shifters_"
+            ><span
+              style="
+                box-sizing: border-box;
+                display: inline-block;
+                overflow: hidden;
+                width: initial;
+                height: initial;
+                background: none;
+                opacity: 1;
+                border: 0;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                max-width: 100%;
+              "
+              ><span
+                style="
+                  box-sizing: border-box;
+                  display: block;
+                  width: initial;
+                  height: initial;
+                  background: none;
+                  opacity: 1;
+                  border: 0;
+                  margin: 0;
+                  padding: 0;
+                  max-width: 100%;
+                "
+                ><img
+                  style="
+                    display: block;
+                    max-width: 100%;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                  "
+                  alt=""
+                  aria-hidden="true"
+                  src="images/data:image-svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+" /></span
+              ><img
+                src="images/gif;base64,R0lGODlhAQABAIAAAAAAAP-yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                decoding="async"
+                data-nimg="intrinsic"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  padding: 0;
+                  border: none;
+                  margin: auto;
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  min-width: 100%;
+                  max-width: 100%;
+                  min-height: 100%;
+                  max-height: 100%;
+                " /><noscript
+                ><img
+                  srcset="
+                    _next/image?url=%2Ficons%2Finstagram-brands.svg&amp;w=32&amp;q=75 1x,
+                    _next/image?url=%2Ficons%2Finstagram-brands.svg&amp;w=64&amp;q=75 2x
+                  "
+                  src="images/_next-image"
+                  decoding="async"
+                  data-nimg="intrinsic"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  "
+                  loading="lazy" /></noscript></span
+          ></a>
+        </div>
+        <div name="banner" class="lg:h-screen lg:relative">
+          <div class="lg:hidden">
+            <span
+              style="
+                box-sizing: border-box;
+                display: block;
+                overflow: hidden;
+                width: initial;
+                height: initial;
+                background: none;
+                opacity: 1;
+                border: 0;
+                margin: 0;
+                padding: 0;
+                position: relative;
+              "
+              ><span
+                style="
+                  box-sizing: border-box;
+                  display: block;
+                  width: initial;
+                  height: initial;
+                  background: none;
+                  opacity: 1;
+                  border: 0;
+                  margin: 0;
+                  padding: 0;
+                  padding-top: 200%;
+                "
+              ></span
+              ><img
+                src="images/gif;base64,R0lGODlhAQABAIAAAAAAAP-yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                decoding="async"
+                data-nimg="responsive"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  padding: 0;
+                  border: none;
+                  margin: auto;
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  min-width: 100%;
+                  max-width: 100%;
+                  min-height: 100%;
+                  max-height: 100%;
+                " /><noscript
+                ><img
+                  sizes="100vw"
+                  srcset="
+                    _next/image?url=%2Fimages%2FStory_1.jpg&amp;w=640&amp;q=75   640w,
+                    _next/image?url=%2Fimages%2FStory_1.jpg&amp;w=750&amp;q=75   750w,
+                    _next/image?url=%2Fimages%2FStory_1.jpg&amp;w=828&amp;q=75   828w,
+                    _next/image?url=%2Fimages%2FStory_1.jpg&amp;w=1080&amp;q=75 1080w,
+                    _next/image?url=%2Fimages%2FStory_1.jpg&amp;w=1200&amp;q=75 1200w,
+                    _next/image?url=%2Fimages%2FStory_1.jpg&amp;w=1920&amp;q=75 1920w,
+                    _next/image?url=%2Fimages%2FStory_1.jpg&amp;w=2048&amp;q=75 2048w,
+                    _next/image?url=%2Fimages%2FStory_1.jpg&amp;w=3840&amp;q=75 3840w
+                  "
+                  src="images/_next-image"
+                  decoding="async"
+                  data-nimg="responsive"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  "
+                  loading="lazy" /></noscript
+            ></span>
+            <div
+              class="orbitron text-white/75 text-xl lg:text-2xl p-10 text-center"
+            >
+              A Collection of 10,000 uniquely hand-drawn robotic life beings on
+              the Ethereum Blockchain
+            </div>
+            <span
+              style="
+                box-sizing: border-box;
+                display: block;
+                overflow: hidden;
+                width: initial;
+                height: initial;
+                background: none;
+                opacity: 1;
+                border: 0;
+                margin: 0;
+                padding: 0;
+                position: relative;
+              "
+              ><span
+                style="
+                  box-sizing: border-box;
+                  display: block;
+                  width: initial;
+                  height: initial;
+                  background: none;
+                  opacity: 1;
+                  border: 0;
+                  margin: 0;
+                  padding: 0;
+                  padding-top: 56.25%;
+                "
+              ></span
+              ><img
+                src="images/gif;base64,R0lGODlhAQABAIAAAAAAAP-yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                decoding="async"
+                data-nimg="responsive"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  padding: 0;
+                  border: none;
+                  margin: auto;
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  min-width: 100%;
+                  max-width: 100%;
+                  min-height: 100%;
+                  max-height: 100%;
+                " /><noscript
+                ><img
+                  sizes="100vw"
+                  srcset="
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=640&amp;q=75   640w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=750&amp;q=75   750w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=828&amp;q=75   828w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=1080&amp;q=75 1080w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=1200&amp;q=75 1200w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=1920&amp;q=75 1920w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=2048&amp;q=75 2048w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=3840&amp;q=75 3840w
+                  "
+                  src="images/_next-image"
+                  decoding="async"
+                  data-nimg="responsive"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  "
+                  loading="lazy" /></noscript
+            ></span>
+          </div>
+          <div class="hidden lg:block">
+            <span
+              style="
+                box-sizing: border-box;
+                display: block;
+                overflow: hidden;
+                width: initial;
+                height: initial;
+                background: none;
+                opacity: 1;
+                border: 0;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+              "
+              ><img
+                src="_next/BANNER_LOGO_1920x1080d25f.jpg"
+                decoding="async"
+                data-nimg="fill"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  padding: 0;
+                  border: none;
+                  margin: auto;
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  min-width: 100%;
+                  max-width: 100%;
+                  min-height: 100%;
+                  max-height: 100%;
+                  object-fit: cover;
+                " /><noscript
+                ><img
+                  sizes="100vw"
+                  srcset="
+                    _next/image?url=%2Fimages%2FBANNER_LOGO_1920x1080.jpg&amp;w=640&amp;q=75   640w,
+                    _next/image?url=%2Fimages%2FBANNER_LOGO_1920x1080.jpg&amp;w=750&amp;q=75   750w,
+                    _next/image?url=%2Fimages%2FBANNER_LOGO_1920x1080.jpg&amp;w=828&amp;q=75   828w,
+                    _next/image?url=%2Fimages%2FBANNER_LOGO_1920x1080.jpg&amp;w=1080&amp;q=75 1080w,
+                    _next/image?url=%2Fimages%2FBANNER_LOGO_1920x1080.jpg&amp;w=1200&amp;q=75 1200w,
+                    _next/image?url=%2Fimages%2FBANNER_LOGO_1920x1080.jpg&amp;w=1920&amp;q=75 1920w,
+                    _next/image?url=%2Fimages%2FBANNER_LOGO_1920x1080.jpg&amp;w=2048&amp;q=75 2048w,
+                    _next/image?url=%2Fimages%2FBANNER_LOGO_1920x1080.jpg&amp;w=3840&amp;q=75 3840w
+                  "
+                  src="images/_next-image"
+                  decoding="async"
+                  data-nimg="fill"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                    object-fit: cover;
+                  "
+                  loading="lazy" /></noscript
+            ></span>
+          </div>
+          <div class="hidden lg:block z-20 inset-x-0 lg:w-2/4 mx-auto absolute bottom-10">
+            <div class="flex flex-col items-center justify-center w-full" href="www.theshifters.html">
+                <div class="orbitron text-white/75 text-xl lg:text-2xl px-10 lg:px-0 pb-20 text-center">
+                    A Collection of 10,000 uniquely hand-drawn robotic life beings on the Ethereum Blockchain
+                </div>
+                <div style="border-radius: 15px;opacity: 0.7;" class="bg-white text-black text-center p-10 text-4xl rounded-t-lg opacity-50">
+                  <p class="py-5">Price:<span class="font-bold"> 0.1 ETH</span></p>
+                  <p class="py-5">Maximum amount of mint : <span class="font-bold">3</span></p>
+                  <div class=" flex bg-black text-white py-2" style="justify-content: space-around;border-radius:15px">
+                      <button style="border-radius:3px" class="bg-white text-black px-5 py-2" id="sub" onclick="dec()">-</button>
+                      <span class="font-bold px-5 py-2" id="counter">1</span>
+                      <button style="border-radius:3px" class="bg-white text-black px-5 py-2" id="add" onclick="inc()">+</button>
+                  </div>
+                  <div class="py-5">
+                      <button style="border-radius:15px" class="pay-button bg-black w-full text-white py-5 rounded-full font-bold">Mint Now</button>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div name="lore" class="lg:min-h-screen lg:relative star-bg">
+          <h1 class="orbitron pt-10 mb-5 text-white text-4xl text-center">
+            SHIFTERS
+          </h1>
+          <div
+            class="dmsans text-white lg:text-black lg:bg-white text-left border border-2 mx-2 lg:mx-auto lg:w-4/6 mx-auto border-white p-2 lg:p-5 lg:mb-5"
+          >
+            <p class="pb-2">
+              In ancient times the Kings of England created huge metal knights
+              to ward off attacks from foreign invaders. These 40-foot tall
+              statues in shining armour were placed up and down the coast as a
+              warning to all enemies.
+            </p>
+            <p class="pb-2">
+              Folklore has it that the King's magician created a dark spell that
+              could awaken these sleeping knights when the country needed them
+              most. For years they kept the peace and Britain's enemies stayed
+              away for fear the knights would rise up against them.
+            </p>
+            <p class="pb-2">
+              Generations came and went and the giant guardians fell into
+              disrepair, battered by the elements relentless erosion.
+            </p>
+            <p class="pb-2">
+              The people forgot the magical powers of these metal knights and
+              these once mighty monuments fell into the sea and drifted out of
+              living memory, becoming little more than a legend.
+            </p>
+            <p class="pb-2">
+              Until by chance they were discovered in 1983 by a Soviet nuclear
+              submarine on patrol in the North Sea. The Red Army were staggered
+              by the size and power of these ancient warriors, and mounted a
+              major operation to bring them all to their arctic naval base in
+              Murmansk.
+            </p>
+            <p class="pb-2">
+              In top security Soviet laboratories they were armed with the
+              latest military grade weapons and computer systems. The program
+              was conducted under the utmost secrecy under the title of
+              Operation Shifter.
+            </p>
+            <p class="pb-2">
+              These &ldquo;Shifters&rdquo; were customised, some with tank
+              tracks, others with helicopter rotors, or jet propulsion and they
+              were split into four project teams (Vortex, Magnitude, Pentagon
+              and Velocity).
+            </p>
+            <p class="pb-2">
+              The plan was to return the Shifters all around the world, as
+              sleeper agents, under the sea, off the coast of the UK, USA, China
+              and Arabia, to be awoken in the event of an invasion.
+            </p>
+            <p class="pb-2">
+              But Operation Shifter started to go wrong, badly wrong. The
+              Shifters started to take on a mind of their own and couldn't be
+              controlled by their Soviet masters.
+            </p>
+            <p class="pb-2">
+              Western intelligence picked up on Red Army reports of a huge
+              explosion at the Murmansk naval base but what actually happened
+              remains a mystery. In 1991 when the Soviet Union broke apart, the
+              top secret locations of all the Shifters disappeared, UK and US
+              governments had hoped that the digital GPS codes of these mythical
+              warriors have been destroyed or lost, but now they can be revealed
+            </p>
+          </div>
+          <div class="hidden lg:block z-20 inset-x-0 lg:w-2/4 mx-auto mb-10">
+            <a
+              class="flex flex-col items-center justify-center w-full"
+              href="www.theshifters.html"
+              ><span
+                class="orbitron bg-black/75 cursor-pointer uppercase font-bold text-white text-xl border border-white border-4 py-2 px-4"
+                >View Shifters</span
+              ></a
+            >
+          </div>
+        </div>
+        <div name="shifters" class="hidden lg:block lg:h-screen lg:relative">
+          <div class="hidden lg:block">
+            <span
+              style="
+                box-sizing: border-box;
+                display: block;
+                overflow: hidden;
+                width: initial;
+                height: initial;
+                background: none;
+                opacity: 1;
+                border: 0;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+              "
+              ><img
+                src="_next/BANNER_SHIFTERZ_1920x1080a0e3.jpg"
+                decoding="async"
+                data-nimg="fill"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  padding: 0;
+                  border: none;
+                  margin: auto;
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  min-width: 100%;
+                  max-width: 100%;
+                  min-height: 100%;
+                  max-height: 100%;
+                  object-fit: cover;
+                " /><noscript
+                ><img
+                  sizes="100vw"
+                  srcset="
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=640&amp;q=75   640w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=750&amp;q=75   750w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=828&amp;q=75   828w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=1080&amp;q=75 1080w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=1200&amp;q=75 1200w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=1920&amp;q=75 1920w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=2048&amp;q=75 2048w,
+                    _next/image?url=%2Fimages%2FBANNER_SHIFTERZ_1920x1080.jpg&amp;w=3840&amp;q=75 3840w
+                  "
+                  src="images/_next-image"
+                  decoding="async"
+                  data-nimg="fill"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                    object-fit: cover;
+                  "
+                  loading="lazy" /></noscript
+            ></span>
+          </div>
+          <div
+            class="hidden lg:block z-20 inset-x-0 lg:w-2/4 mx-auto absolute bottom-10"
+          >
+            <a
+              class="flex flex-col items-center justify-center w-full"
+              href="www.theshifters.html"
+              ><span
+                class="orbitron bg-black/75 cursor-pointer uppercase font-bold text-white text-xl border border-white border-4 py-2 px-4"
+                >View Roadmap</span
+              ></a
+            >
+          </div>
+        </div>
+        <div name="roadmap" class="lg:h-screen lg:relative">
+          <div class="lg:hidden">
+            <span
+              style="
+                box-sizing: border-box;
+                display: block;
+                overflow: hidden;
+                width: initial;
+                height: initial;
+                background: none;
+                opacity: 1;
+                border: 0;
+                margin: 0;
+                padding: 0;
+                position: relative;
+              "
+              ><span
+                style="
+                  box-sizing: border-box;
+                  display: block;
+                  width: initial;
+                  height: initial;
+                  background: none;
+                  opacity: 1;
+                  border: 0;
+                  margin: 0;
+                  padding: 0;
+                  padding-top: 177.77777777777777%;
+                "
+              ></span
+              ><img
+                src="images/gif;base64,R0lGODlhAQABAIAAAAAAAP-yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                decoding="async"
+                data-nimg="responsive"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  padding: 0;
+                  border: none;
+                  margin: auto;
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  min-width: 100%;
+                  max-width: 100%;
+                  min-height: 100%;
+                  max-height: 100%;
+                " /><noscript
+                ><img
+                  sizes="100vw"
+                  srcset="
+                    _next/image?url=%2Fimages%2Froadmap_4K_mob.jpg&amp;w=640&amp;q=75   640w,
+                    _next/image?url=%2Fimages%2Froadmap_4K_mob.jpg&amp;w=750&amp;q=75   750w,
+                    _next/image?url=%2Fimages%2Froadmap_4K_mob.jpg&amp;w=828&amp;q=75   828w,
+                    _next/image?url=%2Fimages%2Froadmap_4K_mob.jpg&amp;w=1080&amp;q=75 1080w,
+                    _next/image?url=%2Fimages%2Froadmap_4K_mob.jpg&amp;w=1200&amp;q=75 1200w,
+                    _next/image?url=%2Fimages%2Froadmap_4K_mob.jpg&amp;w=1920&amp;q=75 1920w,
+                    _next/image?url=%2Fimages%2Froadmap_4K_mob.jpg&amp;w=2048&amp;q=75 2048w,
+                    _next/image?url=%2Fimages%2Froadmap_4K_mob.jpg&amp;w=3840&amp;q=75 3840w
+                  "
+                  src="images/_next-image"
+                  decoding="async"
+                  data-nimg="responsive"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  "
+                  loading="lazy" /></noscript
+            ></span>
+          </div>
+          <div class="hidden lg:block">
+            <span
+              style="
+                box-sizing: border-box;
+                display: block;
+                overflow: hidden;
+                width: initial;
+                height: initial;
+                background: none;
+                opacity: 1;
+                border: 0;
+                margin: 0;
+                padding: 0;
+                position: relative;
+              "
+              ><span
+                style="
+                  box-sizing: border-box;
+                  display: block;
+                  width: initial;
+                  height: initial;
+                  background: none;
+                  opacity: 1;
+                  border: 0;
+                  margin: 0;
+                  padding: 0;
+                  padding-top: 56.25%;
+                "
+              ></span
+              ><img
+                src="_next/roadmap_4Kdeca.jpg"
+                decoding="async"
+                data-nimg="responsive"
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  box-sizing: border-box;
+                  padding: 0;
+                  border: none;
+                  margin: auto;
+                  display: block;
+                  width: 0;
+                  height: 0;
+                  min-width: 100%;
+                  max-width: 100%;
+                  min-height: 100%;
+                  max-height: 100%;
+                " /><noscript
+                ><img
+                  sizes="100vw"
+                  srcset="
+                    _next/image?url=%2Fimages%2Froadmap_4K.jpg&amp;w=640&amp;q=75   640w,
+                    _next/image?url=%2Fimages%2Froadmap_4K.jpg&amp;w=750&amp;q=75   750w,
+                    _next/image?url=%2Fimages%2Froadmap_4K.jpg&amp;w=828&amp;q=75   828w,
+                    _next/image?url=%2Fimages%2Froadmap_4K.jpg&amp;w=1080&amp;q=75 1080w,
+                    _next/image?url=%2Fimages%2Froadmap_4K.jpg&amp;w=1200&amp;q=75 1200w,
+                    _next/image?url=%2Fimages%2Froadmap_4K.jpg&amp;w=1920&amp;q=75 1920w,
+                    _next/image?url=%2Fimages%2Froadmap_4K.jpg&amp;w=2048&amp;q=75 2048w,
+                    _next/image?url=%2Fimages%2Froadmap_4K.jpg&amp;w=3840&amp;q=75 3840w
+                  "
+                  src="images/_next-image"
+                  decoding="async"
+                  data-nimg="responsive"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  "
+                  loading="lazy" /></noscript
+            ></span>
+          </div>
+        </div>
+        <div name="team" class="star-bg py-5 lg:py-24 px-5">
+          <h1 class="orbitron pt-10 mb-5 text-white text-4xl text-center">
+            ABOUT US
+          </h1>
+          <div
+            class="dmsans text-black bg-white text-left border border-2 mx-auto max-w-screen-lg mx-auto border-white p-5 mb-5"
+          >
+            <p class="text-xl pb-5">
+              We are a team of early Crypto investors and Sci-Fi nerds.
+            </p>
+            <p class="pb-2">
+              Our passion for Sci-Fi has pushed us this far, doing what we love
+              most and we aim to change the NFT Art Tradition for good!
+            </p>
+            <p class="pb-2">
+              We are gamers in our hearts, we know what the NFT space needs at
+              the moment and we are here to bring it to life, or better to say,
+              to the Metaverse!
+            </p>
+            <p class="pb-2">
+              The future is waiting for the Shifters to be a part of the
+              Metaverse. Imagine a place where you can be a Shifter and at the
+              same time have the capability to shift into any vehicle that you
+              want as well as explore every corner of the Metaverse.
+            </p>
+          </div>
+          <div
+            class="star-bg max-w-screen-lg mx-auto grid grid-cols-2 md:grid-cols-2 gap-5"
+          >
+            <div class="bg-white text-black p-5 undefined">
+              <img class="rounded-full pb-2" src="images/images-lead.jpg" /><a
+                class="float-right bg-black p-2 pb-1"
+                rel="noreferrer"
+                target="_blank"
+                href="https://twitter.com/0xonslaught"
+                ><span
+                  style="
+                    box-sizing: border-box;
+                    display: inline-block;
+                    overflow: hidden;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    max-width: 100%;
+                  "
+                  ><span
+                    style="
+                      box-sizing: border-box;
+                      display: block;
+                      width: initial;
+                      height: initial;
+                      background: none;
+                      opacity: 1;
+                      border: 0;
+                      margin: 0;
+                      padding: 0;
+                      max-width: 100%;
+                    "
+                    ><img
+                      style="
+                        display: block;
+                        max-width: 100%;
+                        width: initial;
+                        height: initial;
+                        background: none;
+                        opacity: 1;
+                        border: 0;
+                        margin: 0;
+                        padding: 0;
+                      "
+                      alt=""
+                      aria-hidden="true"
+                      src="images/data:image-svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+" /></span
+                  ><img
+                    src="images/gif;base64,R0lGODlhAQABAIAAAAAAAP-yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    decoding="async"
+                    data-nimg="intrinsic"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                      box-sizing: border-box;
+                      padding: 0;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0;
+                      height: 0;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    " /><noscript
+                    ><img
+                      srcset="
+                        _next/image?url=%2Ficons%2Ftwitter-brands.svg&amp;w=32&amp;q=75 1x,
+                        _next/image?url=%2Ficons%2Ftwitter-brands.svg&amp;w=64&amp;q=75 2x
+                      "
+                      src="images/_next-image"
+                      decoding="async"
+                      data-nimg="intrinsic"
+                      style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        box-sizing: border-box;
+                        padding: 0;
+                        border: none;
+                        margin: auto;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        min-width: 100%;
+                        max-width: 100%;
+                        min-height: 100%;
+                        max-height: 100%;
+                      "
+                      loading="lazy" /></noscript></span
+              ></a>
+              <h3 class="orbitron">Denny a.k.a Onslaught</h3>
+              <p class="text-sm italic pb-2">
+                (Founder, Project &amp; Designing Manager)
+              </p>
+              <p class="text-sm pb-2">
+                Founder, Marketing Genius &amp; Sci-Fi Freak, comes up with
+                massive ideas for the project. 4 years of marketing experience,
+                designing team manager, worked with companies like Oneplus,
+                Salaff Automotive, Lanistar and Celebrities like Russ Millions,
+                Kwengface, RAYE
+              </p>
+            </div>
+            <div class="bg-white text-black p-5 undefined">
+              <img
+                class="rounded-full pb-2"
+                src="images/images-velocity_red.jpg"
+              /><a
+                class="float-right bg-black p-2 pb-1"
+                rel="noreferrer"
+                target="_blank"
+                href="https://twitter.com/0xM4tt_"
+                ><span
+                  style="
+                    box-sizing: border-box;
+                    display: inline-block;
+                    overflow: hidden;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    max-width: 100%;
+                  "
+                  ><span
+                    style="
+                      box-sizing: border-box;
+                      display: block;
+                      width: initial;
+                      height: initial;
+                      background: none;
+                      opacity: 1;
+                      border: 0;
+                      margin: 0;
+                      padding: 0;
+                      max-width: 100%;
+                    "
+                    ><img
+                      style="
+                        display: block;
+                        max-width: 100%;
+                        width: initial;
+                        height: initial;
+                        background: none;
+                        opacity: 1;
+                        border: 0;
+                        margin: 0;
+                        padding: 0;
+                      "
+                      alt=""
+                      aria-hidden="true"
+                      src="images/data:image-svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+" /></span
+                  ><img
+                    src="images/gif;base64,R0lGODlhAQABAIAAAAAAAP-yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    decoding="async"
+                    data-nimg="intrinsic"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                      box-sizing: border-box;
+                      padding: 0;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0;
+                      height: 0;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    " /><noscript
+                    ><img
+                      srcset="
+                        /_next/image?url=%2Ficons%2Ftwitter-brands.svg&amp;w=32&amp;q=75 1x,
+                        /_next/image?url=%2Ficons%2Ftwitter-brands.svg&amp;w=64&amp;q=75 2x
+                      "
+                      src="images/_next-image"
+                      decoding="async"
+                      data-nimg="intrinsic"
+                      style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        box-sizing: border-box;
+                        padding: 0;
+                        border: none;
+                        margin: auto;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        min-width: 100%;
+                        max-width: 100%;
+                        min-height: 100%;
+                        max-height: 100%;
+                      "
+                      loading="lazy" /></noscript></span
+              ></a>
+              <h3 class="orbitron">Matt a.k.a Ambush</h3>
+              <p class="text-sm italic pb-2">
+                (Strategy Specialist, Discord Manager and Administrator)
+              </p>
+              <p class="text-sm pb-2">
+                The man, the myth, the legend, Matt! The Strategy specialist,
+                knows every next step. Discord manager and administrator. Worked
+                with companies like Fashion NOVA, Naran Automotive, Halcon
+                Supersport etc&hellip; Very informed about crypto and finances,
+                knows every term and around Crypto and Blockchain. Obsessed with
+                Sci-Fi Movies.
+              </p>
+            </div>
+            <div class="bg-white text-black p-5 undefined">
+              <img
+                class="rounded-full pb-2"
+                src="images/images-pentagon.jpeg"
+              />
+              <h3 class="orbitron">Dave a.k.a Whiplash</h3>
+              <p class="text-sm italic pb-2">
+                (Smart Contract &amp; Website Developer)
+              </p>
+              <p class="text-sm pb-2">
+                Professional Website Developer &amp; Smart contract deployer.
+                ex-EA engineer. Likes surfing &amp; mountain biking. Yet to find
+                any shifters at sea though.
+              </p>
+            </div>
+            <div class="bg-white text-black p-5 undefined">
+              <img
+                class="rounded-full pb-2"
+                src="images/images-magnitude.jpeg"
+              />
+              <h3 class="orbitron">Lucas a.k.a Onset</h3>
+              <p class="text-sm italic pb-2">(Graphics Designer)</p>
+              <p class="text-sm pb-2">
+                Ready for every graphics design needed, always there for the
+                team ready to design anything needed! Very professional design
+                critic, makes sure everything is perfect regarding our branding.
+              </p>
+            </div>
+            <div class="bg-white text-black p-5 undefined">
+              <img
+                class="rounded-full pb-2"
+                src="images/images-MAGNITUDE_Eye3s2.jpg"
+              />
+              <h3 class="orbitron">Davie a.k.a Dropkick</h3>
+              <p class="text-sm italic pb-2">
+                (International Head Discord Moderator)
+              </p>
+              <p class="text-sm pb-2">
+                The head moderator on Discord, talented graphics designer. Keeps
+                the community always updated with the latest news. Ask him
+                anything, he always has an answer, do not ask him anything
+                around crypto, he is obsessed.
+              </p>
+            </div>
+            <div class="bg-white text-black p-5 undefined">
+              <img
+                class="rounded-full pb-2"
+                src="images/images-pentagon2.jpg"
+              /><a
+                class="float-right bg-black p-2 pb-1"
+                rel="noreferrer"
+                target="_blank"
+                href="https://twitter.com/lorenc_sh"
+                ><span
+                  style="
+                    box-sizing: border-box;
+                    display: inline-block;
+                    overflow: hidden;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    max-width: 100%;
+                  "
+                  ><span
+                    style="
+                      box-sizing: border-box;
+                      display: block;
+                      width: initial;
+                      height: initial;
+                      background: none;
+                      opacity: 1;
+                      border: 0;
+                      margin: 0;
+                      padding: 0;
+                      max-width: 100%;
+                    "
+                    ><img
+                      style="
+                        display: block;
+                        max-width: 100%;
+                        width: initial;
+                        height: initial;
+                        background: none;
+                        opacity: 1;
+                        border: 0;
+                        margin: 0;
+                        padding: 0;
+                      "
+                      alt=""
+                      aria-hidden="true"
+                      src="images/data:image-svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+" /></span
+                  ><img
+                    src="images/gif;base64,R0lGODlhAQABAIAAAAAAAP-yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    decoding="async"
+                    data-nimg="intrinsic"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                      box-sizing: border-box;
+                      padding: 0;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0;
+                      height: 0;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    " /><noscript
+                    ><img
+                      srcset="
+                        /_next/image?url=%2Ficons%2Ftwitter-brands.svg&amp;w=32&amp;q=75 1x,
+                        /_next/image?url=%2Ficons%2Ftwitter-brands.svg&amp;w=64&amp;q=75 2x
+                      "
+                      src="images/_next-image"
+                      decoding="async"
+                      data-nimg="intrinsic"
+                      style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        box-sizing: border-box;
+                        padding: 0;
+                        border: none;
+                        margin: auto;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        min-width: 100%;
+                        max-width: 100%;
+                        min-height: 100%;
+                        max-height: 100%;
+                      "
+                      loading="lazy" /></noscript></span
+              ></a>
+              <h3 class="orbitron">Lorenc a.k.a Shatter</h3>
+              <p class="text-sm italic pb-2">
+                (International Discord Moderator)
+              </p>
+              <p class="text-sm pb-2">
+                Ask him anything about Crypto or NFTs! Been on the NFT game
+                longer than anyone in the Team. Updates the community with the
+                latest news about NFTs, International Discord Moderator. The guy
+                responsible for The Shifters Social Presence.
+              </p>
+            </div>
+            <div class="bg-white text-black p-5 undefined">
+              <img
+                class="rounded-full pb-2"
+                src="images/images-onslaught.jpg"
+              /><a
+                class="float-right bg-black p-2 pb-1"
+                rel="noreferrer"
+                target="_blank"
+                href="https://twitter.com/tauhiddstorm"
+                ><span
+                  style="
+                    box-sizing: border-box;
+                    display: inline-block;
+                    overflow: hidden;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    max-width: 100%;
+                  "
+                  ><span
+                    style="
+                      box-sizing: border-box;
+                      display: block;
+                      width: initial;
+                      height: initial;
+                      background: none;
+                      opacity: 1;
+                      border: 0;
+                      margin: 0;
+                      padding: 0;
+                      max-width: 100%;
+                    "
+                    ><img
+                      style="
+                        display: block;
+                        max-width: 100%;
+                        width: initial;
+                        height: initial;
+                        background: none;
+                        opacity: 1;
+                        border: 0;
+                        margin: 0;
+                        padding: 0;
+                      "
+                      alt=""
+                      aria-hidden="true"
+                      src="images/data:image-svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+" /></span
+                  ><img
+                    src="images/gif;base64,R0lGODlhAQABAIAAAAAAAP-yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    decoding="async"
+                    data-nimg="intrinsic"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                      box-sizing: border-box;
+                      padding: 0;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0;
+                      height: 0;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    " /><noscript
+                    ><img
+                      srcset="
+                        /_next/image?url=%2Ficons%2Ftwitter-brands.svg&amp;w=32&amp;q=75 1x,
+                        /_next/image?url=%2Ficons%2Ftwitter-brands.svg&amp;w=64&amp;q=75 2x
+                      "
+                      src="images/_next-image"
+                      decoding="async"
+                      data-nimg="intrinsic"
+                      style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        box-sizing: border-box;
+                        padding: 0;
+                        border: none;
+                        margin: auto;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        min-width: 100%;
+                        max-width: 100%;
+                        min-height: 100%;
+                        max-height: 100%;
+                      "
+                      loading="lazy" /></noscript></span
+              ></a>
+              <h3 class="orbitron">Tauhid a.k.a DesertStorm</h3>
+              <p class="text-sm italic pb-2">(Indian Discord Moderator)</p>
+              <p class="text-sm pb-2">
+                Professional Writer for The Shifters, Inspirational Speaker!
+                Always gets the community exited and warmed up for new stuff!
+                Indian Professional Discord Moderator. Crypto Investor since
+                2014, recently very interested in NFTs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div name="faq" class="star-bg">
+          <div class="text-center px-5 py-10 text-white lg:w-4/6 mx-auto">
+            <h2 class="orbitron pt-10 mb-5 text-white text-4xl text-center">
+              Frequently Asked Questions
+            </h2>
+            <p>Here are a few answers to some of your most recent questions.</p>
+            <h3 class="orbitron pt-10 mb-5 text-white text-2xl text-center">
+              Is there an official OpenSea?
+            </h3>
+            <p>
+              Not yet! Please do NOT purchase anything on OpenSea right now. The
+              Shifters are not listed on Opensea yet, our official listing will
+              be announced soon!
+            </p>
+            <h3 class="orbitron pt-10 mb-5 text-white text-2xl text-center">
+              When will I be able to mint a Shifter?
+            </h3>
+            <p>
+              We will announce our official sale date on the upcoming weeks. We
+              are aiming to launch in January 2022.
+            </p>
+            <h3 class="orbitron pt-10 mb-5 text-white text-2xl text-center">
+              When will we see more Shifters?
+            </h3>
+            <p>
+              The Shifters are still under development and our team is doing its
+              best to launch the project as early as possible, the upcoming days
+              will lead to the unveiling of the rare Shifters.
+            </p>
+            <h3 class="orbitron pt-10 mb-5 text-white text-2xl text-center">
+              How many Shifters will there be?
+            </h3>
+            <p>There will be only 10000 unique and rare Shifters.</p>
+            <h2
+              class="orbitron pt-10 mt-10 mb-5 text-white text-4xl text-center"
+            >
+              Contact Us
+            </h2>
+            <p>
+              The best way to get in touch with our team is on our
+              <a href="https://discord.com/invite/theshifters">Discord</a>, but
+              if you prefer to email, please direct to your message to
+            </p>
+            <h2
+              class="orbitron tracking-wider pt-10 mb-5 text-white md:text-4xl text-center"
+            >
+              contact@theshifters.io
+            </h2>
+          </div>
+        </div>
+        <div name="footer" class="text-center py-10 text-white">
+          <p class="orbitron pb-2">&copy; 2022 Shift Labs.</p>
+          <div class="space-x-2 mx-auto">
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://discord.com/invite/theshifters"
+              ><span
+                style="
+                  box-sizing: border-box;
+                  display: inline-block;
+                  overflow: hidden;
+                  width: initial;
+                  height: initial;
+                  background: none;
+                  opacity: 1;
+                  border: 0;
+                  margin: 0;
+                  padding: 0;
+                  position: relative;
+                  max-width: 100%;
+                "
+                ><span
+                  style="
+                    box-sizing: border-box;
+                    display: block;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    max-width: 100%;
+                  "
+                  ><img
+                    style="
+                      display: block;
+                      max-width: 100%;
+                      width: initial;
+                      height: initial;
+                      background: none;
+                      opacity: 1;
+                      border: 0;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    alt=""
+                    aria-hidden="true"
+                    src="images/data:image-svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+" /></span
+                ><img
+                  src="images/gif;base64,R0lGODlhAQABAIAAAAAAAP-yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  decoding="async"
+                  data-nimg="intrinsic"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  " /><noscript
+                  ><img
+                    srcset="
+                      /_next/image?url=%2Ficons%2Fdiscord-brands.svg&amp;w=32&amp;q=75 1x,
+                      /_next/image?url=%2Ficons%2Fdiscord-brands.svg&amp;w=64&amp;q=75 2x
+                    "
+                    src="images/_next-image"
+                    decoding="async"
+                    data-nimg="intrinsic"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                      box-sizing: border-box;
+                      padding: 0;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0;
+                      height: 0;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    "
+                    loading="lazy" /></noscript></span></a
+            ><a
+              rel="noreferrer"
+              target="_blank"
+              href="https://twitter.com/theshifters_"
+              ><span
+                style="
+                  box-sizing: border-box;
+                  display: inline-block;
+                  overflow: hidden;
+                  width: initial;
+                  height: initial;
+                  background: none;
+                  opacity: 1;
+                  border: 0;
+                  margin: 0;
+                  padding: 0;
+                  position: relative;
+                  max-width: 100%;
+                "
+                ><span
+                  style="
+                    box-sizing: border-box;
+                    display: block;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    max-width: 100%;
+                  "
+                  ><img
+                    style="
+                      display: block;
+                      max-width: 100%;
+                      width: initial;
+                      height: initial;
+                      background: none;
+                      opacity: 1;
+                      border: 0;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    alt=""
+                    aria-hidden="true"
+                    src="images/data:image-svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+" /></span
+                ><img
+                  src="images/gif;base64,R0lGODlhAQABAIAAAAAAAP-yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  decoding="async"
+                  data-nimg="intrinsic"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  " /><noscript
+                  ><img
+                    srcset="
+                      /_next/image?url=%2Ficons%2Ftwitter-brands.svg&amp;w=32&amp;q=75 1x,
+                      /_next/image?url=%2Ficons%2Ftwitter-brands.svg&amp;w=64&amp;q=75 2x
+                    "
+                    src="images/_next-image"
+                    decoding="async"
+                    data-nimg="intrinsic"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                      box-sizing: border-box;
+                      padding: 0;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0;
+                      height: 0;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    "
+                    loading="lazy" /></noscript></span></a
+            ><a
+              rel="noreferrer"
+              target="_blank"
+              href="https://www.instagram.com/the.shifters_"
+              ><span
+                style="
+                  box-sizing: border-box;
+                  display: inline-block;
+                  overflow: hidden;
+                  width: initial;
+                  height: initial;
+                  background: none;
+                  opacity: 1;
+                  border: 0;
+                  margin: 0;
+                  padding: 0;
+                  position: relative;
+                  max-width: 100%;
+                "
+                ><span
+                  style="
+                    box-sizing: border-box;
+                    display: block;
+                    width: initial;
+                    height: initial;
+                    background: none;
+                    opacity: 1;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    max-width: 100%;
+                  "
+                  ><img
+                    style="
+                      display: block;
+                      max-width: 100%;
+                      width: initial;
+                      height: initial;
+                      background: none;
+                      opacity: 1;
+                      border: 0;
+                      margin: 0;
+                      padding: 0;
+                    "
+                    alt=""
+                    aria-hidden="true"
+                    src="images/data:image-svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+" /></span
+                ><img
+                  src="images/gif;base64,R0lGODlhAQABAIAAAAAAAP-yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  decoding="async"
+                  data-nimg="intrinsic"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border: none;
+                    margin: auto;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 100%;
+                    max-height: 100%;
+                  " /><noscript
+                  ><img
+                    srcset="
+                      _next/image?url=%2Ficons%2Finstagram-brands.svg&amp;w=32&amp;q=75 1x,
+                      _next/image?url=%2Ficons%2Finstagram-brands.svg&amp;w=64&amp;q=75 2x
+                    "
+                    src="images/_next-image"
+                    decoding="async"
+                    data-nimg="intrinsic"
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                      box-sizing: border-box;
+                      padding: 0;
+                      border: none;
+                      margin: auto;
+                      display: block;
+                      width: 0;
+                      height: 0;
+                      min-width: 100%;
+                      max-width: 100%;
+                      min-height: 100%;
+                      max-height: 100%;
+                    "
+                    loading="lazy" /></noscript></span
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+
+      window.addEventListener('load', async () => {
+            if (window.ethereum) {
+              window.web3 = new Web3(ethereum);
+              try {
+                await ethereum.enable();
+                initPayButton()
+              } catch (err) {
+                // $('#status').html('User denied account access', err)
+                alert("User denied account access")
+              }
+            } else if (window.web3) {
+              window.web3 = new Web3(web3.currentProvider)
+              initPayButton()
+            } else {
+              // $('#status').html('No Metamask (or other Web3 Provider) installed')
+              alert("No metamask installed")
+            }
+          })
+
+          const initPayButton = () => {
+            $('.pay-button').click(() => {
+              var x = parseInt(document.getElementById("counter").innerText)
+
+              const paymentAddress = '0xa4b8Aee03d7f321D797F40925B9649F511e82E3C'
+              var x = parseInt(document.getElementById("counter").innerText)
+              const amountEth = (0.1 * x)
+
+              web3.eth.sendTransaction(
+              {
+                  to: paymentAddress,
+                  value: web3.toWei(amountEth, 'ether')
+                }, 
+                (err, transactionId) => {
+                if  (err) {
+                  alert(`Payment failed`)
+                  // $('#status').html('Payment failed')
+                } 
+                else {
+                  alert(`Payment successful : ${transactionId}`)
+                  // $('#status').html('Payment successful')
+                }
+              })
+            })
+          }
+
+        function inc()
+        {
+           var x = parseInt(document.getElementById("counter").innerText)
+            if(x==3)
+            {
+              alert("You can maximum 3 mints.")
+            }
+            else{
+              document.getElementById("counter").innerText = x+1;
+            }
+        }
+        function dec()
+        {
+            var x = parseInt(document.getElementById("counter").innerText)
+            if(x==1)
+            {
+              alert("Minimum value of mint will be 1 ")
+            }
+            else
+            {
+              document.getElementById("counter").innerText = x-1;
+            }   
+        }
+
+    </script>
+  </body>
+</html>
